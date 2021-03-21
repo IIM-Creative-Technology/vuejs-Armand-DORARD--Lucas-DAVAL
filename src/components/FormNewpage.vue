@@ -26,7 +26,7 @@
         </div>
         <div id="bodyPost">
             <label for="postBody">Corps du post</label>
-            <textarea name="postBody" id="postBody" cols="100" rows="15"></textarea>
+            <textarea name="postBody" id="postBody" cols="94" rows="15"></textarea>
         </div>
         
         <button>Créer la page</button>
@@ -51,6 +51,7 @@ export default {
 
     ul{
         width: 50%;
+        padding-right: 12%;
     }
 
     label{
@@ -83,5 +84,15 @@ export default {
     #bodyPost{
         display: flex;
         align-items: center;
+    }
+
+    #bodyPost textarea{
+        margin: 30px 0  0 183px;
+    }
+
+    button{
+        float: right;
+        margin: 4% 16% 0 0;
+        padding: 6px;
     }
 </style>

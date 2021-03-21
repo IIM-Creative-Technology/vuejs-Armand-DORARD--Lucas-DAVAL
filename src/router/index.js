@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+
 const routes = [
   {
     path: '/admin',
@@ -21,7 +22,7 @@ const routes = [
     name: 'Newpage',
     component: () => import('../views/Newpage.vue')
   },
-  
+
 ]
 
 const router = createRouter({
