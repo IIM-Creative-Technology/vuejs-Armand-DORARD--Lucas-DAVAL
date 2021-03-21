@@ -1,34 +1,33 @@
-# Projet Laravel
+# Projet Vue
 
-Création d’un site e-commerce sur Laravel
+Création d’un blog sur vue.js
 
 ## Pré-requis
 
-- Une version PHP supérieur à 7.4
-- MySQL (Laragon ou MAMP) pour lancer le serveur
-- Logiciel visualisation de DB MySQL (Table Plus, Sequel Pro) pour visualiser les seeders générés (notamment les 2 comptes admin)
-- Composer 2
+- vue
+- npm ou yarn
 
 
 ## Installation
 
-Aprés avoir cloné le repository gitHub :
-- Exécutez la commande npm install et composer install
-- Créez votre fichier .envà la racine du projet
-- Créez une nouvelle connexion de base de donnée dans votre logiciel de visualisation
-- Exécutez la commande php artisan migrate:refresh --seed
+- npm install 
+
 
 ## Démarrage
 
-- Exécutez la commande php artisan serve
-- Copiez l'URL généré et collez la dans votre navigateur
+- npm run serve
 
 ## Fabriqué avec
 
-* [Boostrap](http://bootstrap.com/) - front-end open source toolkit
-* [Laravel](http://bootstrap.com/) - back-end open-source framework web 
-* [Visual Studio Code](https://code.visualstudio.com/) - IDE
+- vue CLI
+- vue rooter
+- vue X
 
+## Commentaire
+- Ajout article fonctionel
+- Les routing sont fonctionel
+- affichage fonctionel
+- 
 ## Auteurs
-
+* Armand DORARD alias [@Ericar974](https://github.com/Ericar974)
 * Lucas DAVAL alias [@LucasDaval](https://github.com/LucasDaval)
