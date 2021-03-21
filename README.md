@@ -24,9 +24,9 @@ Création d’un blog sur vue.js
 - vue X
 
 ## Commentaire
-- Ajout article fonctionel
-- Les routing sont fonctionel
-- affichage fonctionel
+- Ajout article fonctionnel
+- Les routing sont fonctionnel
+- affichage fonctionnel
 - 
 ## Auteurs
 * Armand DORARD alias [@Ericar974](https://github.com/Ericar974)
