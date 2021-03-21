@@ -24,10 +24,11 @@
                 <label for="image">Ajouter une image</label>
             </div>            
         </div>
-
-        <label for="postBody">Corps du post</label>
-        <textarea name="postBody" id="postBody" cols="100" rows="15"></textarea>
-        <br>
+        <div id="bodyPost">
+            <label for="postBody">Corps du post</label>
+            <textarea name="postBody" id="postBody" cols="100" rows="15"></textarea>
+        </div>
+        
         <button>Créer la page</button>
     </form>
 </template>
@@ -75,7 +76,12 @@ export default {
     }
 
     #img input{
-        width: 25%;
+        width: 35%;
         margin: 0 auto;
+    }
+
+    #bodyPost{
+        display: flex;
+        align-items: center;
     }
 </style>
