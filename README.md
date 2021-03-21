@@ -24,7 +24,7 @@ Création d’un blog sur vue.js
 - vue X
 
 ## Commentaire
-- Ajout article fonctionnel
+- Ajout article fonctionnel (après avoir créer une page, cliquez sur 'Gérer le blog')
 - Les routing sont fonctionnel
 - affichage fonctionnel
 - 
