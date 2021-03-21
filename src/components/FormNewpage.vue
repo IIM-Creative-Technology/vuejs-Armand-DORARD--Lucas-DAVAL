@@ -4,17 +4,17 @@
             <ul>
                 <li>
                     <label for="title">Titre de la page</label>
-                    <input name="title" id="title" type="text" required>
-                </li>
-
-                <li>
-                    <label for="metaDesc">Meta Description</label>
-                    <input name="metaDesc" id="metaDesc" type="text" required>
+                    <input @input="updateTitle" name="title" id="title" type="text" required>
                 </li>
 
                 <li>
                     <label for="metaTitle">Meta Title</label>
-                    <input name="metaTitle" id="metaTitle" type="text" required>
+                    <input @input="updateMetaTitle" name="metaTitle" id="metaTitle" type="text" required>
+                </li>
+                
+                <li>
+                    <label for="metaDesc">Meta Description</label>
+                    <input @input="updateMetaDesc" name="metaDesc" id="metaDesc" type="text" required>
                 </li>
             </ul>
 
@@ -26,7 +26,7 @@
         </div>
         <div id="bodyPost">
             <label for="postBody">Corps du post</label>
-            <textarea name="postBody" id="postBody" cols="94" rows="15"></textarea>
+            <textarea @input="updatePostBody" name="postBody" id="postBody" cols="94" rows="15"></textarea>
         </div>
         
         <p class="button" @click="sendPost">Créer la page</p>
@@ -46,10 +46,22 @@ export default {
     },
     methods: {
         sendPost(){
-            this.$store.commit('POSTS_PUSH',
-            ['Article5','MetaTitleArticle5','MetadescritpionArticle5', 'Description lorem ipsum de l\'artcle 5', 'Pierre', 'https://images.gameinfo.io/pokemon/256/143-00.png']
-            )
-        }
+            this.post.push("Pierre", "https://images.gameinfo.io/pokemon/256/143-00.png")
+            this.$store.commit('POSTS_PUSH', this.post)
+        },
+
+        updateTitle(e){
+            this.post[0] = e.target.value
+        },
+        updateMetaTitle(e){
+            this.post[1] = e.target.value
+        },
+        updateMetaDesc(e){
+            this.post[2] = e.target.value
+        },        
+        updatePostBody(e){
+            this.post[3] = e.target.value
+        },
     }
 }
 </script>
@@ -60,6 +72,8 @@ export default {
     }
     .button{
         border: solid 1px black;
+        width: fit-content;
+        float: right;
     }
     form{
         margin: 8% 12%;
@@ -111,5 +125,9 @@ export default {
         float: right;
         margin: 4% 16% 0 0;
         padding: 6px;
+    }
+
+    p{
+        cursor: pointer;
     }
 </style>

@@ -7,7 +7,13 @@
 
 
             <img :src=[item[5]] alt="image de l'article">
-            <p>{{ item[2] }}</p>
+            <ul>
+                <li><span>Title : </span>{{ item[0] }}</li>
+                <li><span>Meta title : </span>{{ item[1] }}</li>
+                <li><span>Meta description : </span>{{ item[2] }}</li>
+                <li><span>Post : </span>{{ item[3] }}</li>
+                <li><span>Author : </span>{{ item[4] }}</li>
+            </ul>
             <a href="#">Editer</a>
             <p class="delete" @click="deletePost(item[0])">X</p>
 
@@ -38,6 +44,7 @@ export default {
 <style scoped>
 .bloc{
     display: flex;
+    justify-content: space-around;
     margin: 50px 200px 50px 200px;
     border: solid 1px black;
     text-decoration: none;
@@ -64,5 +71,20 @@ a{
     color: black;
     padding: 10px;
     background-color: red;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+li{
+    list-style: none;
+}
+
+span{
+    font-weight: 600;
 }
 </style>
