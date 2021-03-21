@@ -18,9 +18,10 @@
                 </li>
             </ul>
 
-            <div>
-                <label for="image">Ajouter une image</label>
+            <div id="img">
                 <input type="" name="image" id="image">
+                <br>
+                <label for="image">Ajouter une image</label>
             </div>            
         </div>
 
@@ -57,5 +58,18 @@ export default {
 
     #formFirstPart{
         display: flex;
+    }
+
+    #img{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #img input{
+        width: 25%;
+        margin: 0 auto;
     }
 </style>
