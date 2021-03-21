@@ -13,24 +13,29 @@ export default createStore({
   getters: {
   },
   mutations: {
-    POSTS_PUSH(state){
-      state.nbarticle.push(['Article5','MetaTitleArticle5','MetadescritpionArticle5', 'Description lorem ipsum de l\'artcle 5', 'Pierre', 'https://images.gameinfo.io/pokemon/256/143-00.png'])           
+    POSTS_PUSH(state, newPost){
+      state.nbarticle.push(newPost)           
     },
     POSTS_SPLIT(state, element){
       state.nbarticle.split(element, 1)
     }
   },
   actions: {
-    pushNewPost(context, newPost){
-      // let verifyUnique = 0
-      // for (let i = 0; i < state.nbarticle.length; i++) {
-      //   if (state.nbarticle[i][0] !== newPost[0]) {
-      //     verifyUnique++
-      //   }        
-      // }
-      // if (verifyUnique === state.nbarticle.length-1) {
+    pushNewPost(context, state, newPost){
+      // ---------------------------------------- Verify title is unique ----------------------//
+      let verifyUnique = 0
+      for (let i = 0; i < state.nbarticle.length; i++) {
+        if (state.nbarticle[i][0] !== newPost[0]) {
+          verifyUnique++
+        }        
+      }
+      // ---------------------------------------- Verify title is unique ----------------------//
+
+
+
+      if (verifyUnique === state.nbarticle.length-1) {
         context.commit('POSTS_PUSH', newPost)
-      // } 
+      } 
     },
 
     splitPost({ commit }, state, post){
