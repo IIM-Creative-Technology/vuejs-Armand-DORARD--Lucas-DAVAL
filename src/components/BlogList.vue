@@ -5,7 +5,7 @@
                 :key="item"
                 :item="item">
             <router-link class="bloc" :to="'/blog/' + item[0]">
-                <img src="../assets/logo.png" alt="image de l'article">
+                <img :src=[item[5]] alt="image de l'article">
                 <p>{{ item[2] }}</p>
             </router-link>
             

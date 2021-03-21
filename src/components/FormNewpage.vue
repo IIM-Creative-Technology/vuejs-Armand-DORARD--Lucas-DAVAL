@@ -1,5 +1,5 @@
 <template>
-    <form action="/" method="post">
+    <form action="/admin" method="submit">
         <div id="formFirstPart">
             <ul>
                 <li>
@@ -24,17 +24,33 @@
                 <label for="image">Ajouter une image</label>
             </div>            
         </div>
-
-        <label for="postBody">Corps du post</label>
-        <textarea name="postBody" id="postBody" cols="100" rows="15"></textarea>
-        <br>
-        <button>Créer la page</button>
+        <div id="bodyPost">
+            <label for="postBody">Corps du post</label>
+            <textarea name="postBody" id="postBody" cols="94" rows="15"></textarea>
+        </div>
+        
+        <button @click="sendPost">Créer la page</button>
     </form>
 </template>
 
 <script>
+// import FormNewpageStore from './FormNewpageStore'
+import Store from '../store/index'
 export default {
-    name: "form"
+    name: "form",
+    store: Store,
+    data() {
+        return {
+            post: []
+        }
+    },
+    methods: {
+        sendPost(){
+            this.$store.dispatch('pushNewPost', 'blabla'
+                //   ['Article5','MetaTitleArticle5','MetadescritpionArticle5', 'Description lorem ipsum de l\'artcle 5', 'Pierre', 'https://images.gameinfo.io/pokemon/256/143-00.png'],
+            )
+        }
+    }
 }
 </script>
 
@@ -50,6 +66,7 @@ export default {
 
     ul{
         width: 50%;
+        padding-right: 12%;
     }
 
     label{
@@ -75,7 +92,22 @@ export default {
     }
 
     #img input{
-        width: 25%;
+        width: 35%;
         margin: 0 auto;
+    }
+
+    #bodyPost{
+        display: flex;
+        align-items: center;
+    }
+
+    #bodyPost textarea{
+        margin: 30px 0  0 183px;
+    }
+
+    button{
+        float: right;
+        margin: 4% 16% 0 0;
+        padding: 6px;
     }
 </style>
