@@ -9,7 +9,7 @@
             <img :src=[item[5]] alt="image de l'article">
             <p>{{ item[2] }}</p>
             <a href="#">Editer</a>
-            <a class="delete" href="#">X</a>
+            <p class="delete" @click="deletePost(item[0])">X</p>
 
 
         </div>
@@ -24,6 +24,12 @@ export default {
     data() {
         return {
             articles: this.$store.state.nbarticle,
+        }
+    },
+    methods: {
+        deletePost(event){
+
+            this.$store.commit('POSTS_SPLIT', event)
         }
     }
 }
@@ -51,6 +57,12 @@ a{
     padding: 10px;
 }
 .delete{
+    
+    margin: auto 20px;
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
     background-color: red;
 }
 </style>

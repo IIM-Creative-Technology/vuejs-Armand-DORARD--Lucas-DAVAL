@@ -16,8 +16,17 @@ export default createStore({
     POSTS_PUSH(state){
       state.nbarticle.push(['Article5','MetaTitleArticle5','MetadescritpionArticle5', 'Description lorem ipsum de l\'artcle 5', 'Pierre', 'https://images.gameinfo.io/pokemon/256/143-00.png'])           
     },
-    POSTS_SPLIT(state, element){
-      state.nbarticle.split(element, 1)
+    POSTS_SPLIT(state,e){
+      state.nbarticle.forEach(element => {
+        console.log(element)
+        if (e === element[0]) {
+          console.log('ok')
+          state.nbarticle.splice(element,1)
+        }else{
+          console.log('pasok')
+        }
+      })
+      ;
     }
   },
   actions: {
