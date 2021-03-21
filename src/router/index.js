@@ -13,6 +13,12 @@ const routes = [
     component: () => import('../views/Blog.vue')
   },
   {
+    path: '/blog/:id',  
+    name: 'article',
+    props: true,
+    component: () => import('../components/Article.vue')
+  },
+  {
     path: '/login',
     name: 'Login',
     component: () => import('../views/Login.vue')
@@ -22,7 +28,7 @@ const routes = [
     name: 'Newpage',
     component: () => import('../views/Newpage.vue')
   },
-
+  
 ]
 
 const router = createRouter({

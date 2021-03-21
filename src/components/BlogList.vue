@@ -1,10 +1,9 @@
 <template>
     <div>
         {{getArticle}}
-        <a href="#" class="bloc" v-for="item in articles"
+        <a href="#" class="bloc" v-for="item in articles"        
                 :key="item"
                 :item="item">
-
 
             <img src="../assets/logo.png" alt="image de l'article">
             <p>{{ item[2] }}</p>
@@ -23,7 +22,7 @@ export default {
         return {
             articles: this.$store.state.nbarticle,
         }
-    }
+    },
 }
 </script>
 
