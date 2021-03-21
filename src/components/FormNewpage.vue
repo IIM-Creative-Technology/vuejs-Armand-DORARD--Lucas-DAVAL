@@ -1,5 +1,5 @@
 <template>
-    <form action="/admin" method="submit">
+    <form action="/#">
         <div id="formFirstPart">
             <ul>
                 <li>
@@ -29,7 +29,7 @@
             <textarea name="postBody" id="postBody" cols="94" rows="15"></textarea>
         </div>
         
-        <button @click="sendPost">Créer la page</button>
+        <p class="button" @click="sendPost">Créer la page</p>
     </form>
 </template>
 
@@ -46,8 +46,8 @@ export default {
     },
     methods: {
         sendPost(){
-            this.$store.dispatch('pushNewPost', 'blabla'
-                //   ['Article5','MetaTitleArticle5','MetadescritpionArticle5', 'Description lorem ipsum de l\'artcle 5', 'Pierre', 'https://images.gameinfo.io/pokemon/256/143-00.png'],
+            this.$store.commit('POSTS_PUSH',
+            ['Article5','MetaTitleArticle5','MetadescritpionArticle5', 'Description lorem ipsum de l\'artcle 5', 'Pierre', 'https://images.gameinfo.io/pokemon/256/143-00.png']
             )
         }
     }
@@ -58,7 +58,9 @@ export default {
     *{
         list-style: none;
     }
-
+    .button{
+        border: solid 1px black;
+    }
     form{
         margin: 8% 12%;
         text-align: left;

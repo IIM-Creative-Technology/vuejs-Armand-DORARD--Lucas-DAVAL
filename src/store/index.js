@@ -13,8 +13,8 @@ export default createStore({
   getters: {
   },
   mutations: {
-    POSTS_PUSH(state, newPost){
-      state.nbarticle.push(newPost)           
+    POSTS_PUSH(state){
+      state.nbarticle.push(['Article5','MetaTitleArticle5','MetadescritpionArticle5', 'Description lorem ipsum de l\'artcle 5', 'Pierre', 'https://images.gameinfo.io/pokemon/256/143-00.png'])           
     },
     POSTS_SPLIT(state, element){
       state.nbarticle.split(element, 1)
