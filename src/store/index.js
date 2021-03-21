@@ -1,25 +1,24 @@
 import { createStore } from 'vuex'
+import { mapState } from 'vuex'
 
 export default createStore({
   state: {
-    nbarticle: [
-      //[title, metaTitle, metaDescription, Corps, author]
-      ['Article1','Description lorem ipsum de l\'artcle 2','Pierre'],
-
-      ['Article3','Description lorem ipsum de l\'artcle 2','Pierre'],
-  ]},
-  getters: {
-    getArticle: state => {
-      return `${state.nbarticle[0][0]} ${state.nbarticle[0][1]} ${state.nbarticle[0][2]}`
-    }
+    posts: []
   },
   mutations: {
-
+    POSTS_PUSH(newPost){
+      state.posts.push(newPost)
+    },
+    POSTS_SPLIT(title){
+      state.posts.forEach(element => {
+        if (element[0] === title) {
+          state.posts.split(element, 1)
+        }
+      });
+    }
   },
   actions: {
-
   },
   modules: {
-
   }
 })
