@@ -27,6 +27,8 @@
 
         <label for="postBody">Corps du post</label>
         <textarea name="postBody" id="postBody" cols="100" rows="15"></textarea>
+        <br>
+        <button>Créer la page</button>
     </form>
 </template>
 
@@ -48,6 +50,10 @@ export default {
 
     ul{
         width: 50%;
+    }
+
+    label{
+        align-items: center;
     }
 
     li{
