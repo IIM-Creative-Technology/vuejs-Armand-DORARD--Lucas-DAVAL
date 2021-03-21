@@ -1,16 +1,18 @@
 <template>
     <div>
         {{getArticle}}
-        <a href="#" class="bloc" v-for="item in articles"
+        <div href="#" class="bloc" v-for="item in articles"
                 :key="item"
                 :item="item">
 
 
             <img src="../assets/logo.png" alt="image de l'article">
             <p>{{ item[2] }}</p>
+            <a href="#">Editer</a>
+            <a class="delete" href="#">X</a>
 
 
-        </a>
+        </div>
     </div>
 
 </template>
@@ -40,5 +42,15 @@ p{
 }
 img{
     margin-left: 50px;
+}
+a{
+    margin: auto 20px;
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+.delete{
+    background-color: red;
 }
 </style>

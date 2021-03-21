@@ -4,14 +4,12 @@ export default createStore({
   state: {
     nbarticle: [
       //[title, metaTitle, metaDescription, Corps, author]
-      ['Article1','Description lorem ipsum de l\'artcle 2','Pierre'],
+      ['Article1','MetaTitleArticle1','MetadescitpionArticle1', 'Description lorem ipsum de l\'artcle 1','Pierre'],
 
-      ['Article3','Description lorem ipsum de l\'artcle 2','Pierre'],
+      ['Article2','MetaTitleArticle2','MetadescitpionArticle2', 'Description lorem ipsum de l\'artcle 2','Pierre'],
+      ['Article3','MetaTitleArticle3','MetadescitpionArticle3', 'Description lorem ipsum de l\'artcle 3','Pierre'],
   ]},
   getters: {
-    getArticle: state => {
-      return `${state.nbarticle[0][0]} ${state.nbarticle[0][1]} ${state.nbarticle[0][2]}`
-    }
   },
   mutations: {
 
