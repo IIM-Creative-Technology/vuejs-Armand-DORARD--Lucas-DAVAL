@@ -4,8 +4,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'BlogManager',
-    component: () => import('../views/BlogManager.vue')
+    name: 'Admin',
+    component: () => import('../views/Admin.vue')
   },
   {
     path: '/blog',
