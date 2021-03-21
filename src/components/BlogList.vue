@@ -1,12 +1,14 @@
 <template>
     <div>
         {{getArticle}}
-        <a href="#" class="bloc" v-for="item in articles"        
+        <a v-for="item in articles"        
                 :key="item"
                 :item="item">
-
-            <img src="../assets/logo.png" alt="image de l'article">
-            <p>{{ item[2] }}</p>
+            <router-link class="bloc" :to="'/blog/' + item[0]">
+                <img src="../assets/logo.png" alt="image de l'article">
+                <p>{{ item[2] }}</p>
+            </router-link>
+            
 
 
         </a>
