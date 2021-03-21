@@ -1,5 +1,5 @@
 <template>
-    <form action="/" method="post">
+    <form action="/admin" method="submit">
         <div id="formFirstPart">
             <ul>
                 <li>
@@ -29,13 +29,28 @@
             <textarea name="postBody" id="postBody" cols="94" rows="15"></textarea>
         </div>
         
-        <button>Créer la page</button>
+        <button @click="sendPost">Créer la page</button>
     </form>
 </template>
 
 <script>
+// import FormNewpageStore from './FormNewpageStore'
+import Store from '../store/index'
 export default {
-    name: "form"
+    name: "form",
+    store: Store,
+    data() {
+        return {
+            post: []
+        }
+    },
+    methods: {
+        sendPost(){
+            this.$store.dispatch('pushNewPost', 'blabla'
+                //   ['Article5','MetaTitleArticle5','MetadescritpionArticle5', 'Description lorem ipsum de l\'artcle 5', 'Pierre', 'https://images.gameinfo.io/pokemon/256/143-00.png'],
+            )
+        }
+    }
 }
 </script>
 
