@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/manage-blog">Gérer le blog</router-link> | 
+    <router-link to="/">Gérer le blog</router-link> | 
     <router-link to="/blog">Blog</router-link> | 
     <router-link to="/login">Login</router-link>
   </div>
@@ -8,6 +8,12 @@
 </template>
 
 <style>
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

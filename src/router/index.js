@@ -3,19 +3,24 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/manage-blog',
+    path: '/',
     name: 'BlogManager',
-    component: () => import(/* webpackChunkName: "about" */ '../views/BlogManager.vue')
+    component: () => import('../views/BlogManager.vue')
   },
   {
     path: '/blog',
     name: 'Blog',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Blog.vue')
+    component: () => import('../views/Blog.vue')
   },
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+    component: () => import('../views/Login.vue')
+  },
+  {
+    path: '/new-page',
+    name: 'Newpage',
+    component: () => import('../views/Newpage.vue')
   },
 
 ]
